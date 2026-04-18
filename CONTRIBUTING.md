@@ -23,7 +23,7 @@ Click **Fork** at the top right of this page. This creates a personal copy of th
 ### 2. Clone your fork
 
 ```bash
-git clone https://github.com/<your-username>/<course-repo>.git
+git clone https://github.com/<your-username>/course-introduction-to-python-programming-beginner.git
 cd <course-repo>
 ```
 
@@ -32,15 +32,15 @@ cd <course-repo>
 This keeps your fork connected to the original course repo so you can pull updates.
 
 ```bash
-git remote add upstream https://github.com/17quantum/<course-repo>.git
+git remote add upstream https://github.com/17quantum/course-introduction-to-python-programming-beginner.git
 ```
 
 Verify your remotes:
 
 ```bash
 git remote -v
-# origin    https://github.com/<your-username>/<course-repo>.git (fetch)
-# origin    https://github.com/<your-username>/<course-repo>.git (push)
+# origin    https://github.com/<your-username>/course-introduction-to-python-programming-beginner.git (fetch)
+# origin    https://github.com/<your-username>/course-introduction-to-python-programming-beginner.git (push)
 # upstream  https://github.com/17quantum/course-introduction-to-python-programming-beginner.git (fetch)
 # upstream  https://github.com/17quantum/course-introduction-to-python-programming-beginner.git (push)
 ```
