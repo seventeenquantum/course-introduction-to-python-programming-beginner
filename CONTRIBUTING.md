@@ -41,8 +41,8 @@ Verify your remotes:
 git remote -v
 # origin    https://github.com/<your-username>/<course-repo>.git (fetch)
 # origin    https://github.com/<your-username>/<course-repo>.git (push)
-# upstream  https://github.com/17quantum/<course-repo>.git (fetch)
-# upstream  https://github.com/17quantum/<course-repo>.git (push)
+# upstream  https://github.com/17quantum/course-introduction-to-python-programming-beginner.git (fetch)
+# upstream  https://github.com/17quantum/course-introduction-to-python-programming-beginner.git (push)
 ```
 
 ### 4. Create a submission branch
@@ -84,7 +84,7 @@ git push origin submission/<your-full-name>
 
 ### 8. Open a pull request
 
-1. Go to the **upstream** course repo on GitHub: `github.com/17quantum/<course-repo>`
+1. Go to the **upstream** course repo on GitHub: `github.com/17quantum/course-introduction-to-python-programming-beginner`
 2. Click **Pull requests → New pull request**
 3. Set the base to `main` on the upstream repo
 4. Set the compare to `submission/<your-full-name>` on your fork
