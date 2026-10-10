@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habit tracker</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    .streak { font-weight: bold; }
+    .message { background: #eef; padding: .5rem 1rem; border-radius: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>Habit tracker</h1>
+  {% for message in get_flashed_messages() %}
+    <p class="message">{{ message }}</p>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</body>
+</html>

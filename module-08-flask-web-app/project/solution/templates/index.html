@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post" action="/add">
+  <label>New habit <input name="name" required></label>
+  <button>Add</button>
+</form>
+
+{% if habits %}
+<ul>
+  {% for habit in habits %}
+  <li>
+    {{ habit.name }} &mdash;
+    <span class="streak">{{ habit.streak }} day streak</span>
+    {% if habit.done_today %}
+      (done today)
+    {% else %}
+      <form method="post" action="/checkin/{{ habit.id }}" style="display:inline">
+        <button>Check in</button>
+      </form>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No habits yet. Add your first one above.</p>
+{% endif %}
+{% endblock %}

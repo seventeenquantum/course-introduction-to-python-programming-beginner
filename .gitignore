@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+*.db
+*.log
+savegame.json
+contacts.json
+budget.csv
+simulation.png
+test_downloads/
+.DS_Store

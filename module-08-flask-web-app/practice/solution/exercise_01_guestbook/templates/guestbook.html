@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guestbook</title>
+</head>
+<body style="font-family: system-ui, sans-serif; max-width: 36rem; margin: 2rem auto; padding: 0 1rem;">
+  <h1>Guestbook</h1>
+  {% for error in errors %}
+    <p style="color: #b00020;">{{ error }}</p>
+  {% endfor %}
+  <form method="post">
+    <p><label>Name <input name="name" value="{{ name }}"></label></p>
+    <p><label>Message<br><textarea name="message" rows="3" cols="40">{{ message }}</textarea></label></p>
+    <button>Sign the guestbook</button>
+  </form>
+  <hr>
+  {% for entry in entries %}
+    <p><strong>{{ entry.name }}</strong> <small>{{ entry.created }}</small><br>{{ entry.message }}</p>
+  {% else %}
+    <p>No entries yet. Be the first!</p>
+  {% endfor %}
+</body>
+</html>

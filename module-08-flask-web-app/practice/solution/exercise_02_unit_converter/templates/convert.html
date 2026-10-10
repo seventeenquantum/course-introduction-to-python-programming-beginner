@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit converter</title>
+</head>
+<body style="font-family: system-ui, sans-serif; max-width: 36rem; margin: 2rem auto; padding: 0 1rem;">
+  <h1>Unit converter</h1>
+  <form method="post">
+    <input name="value" required>
+    <select name="from_unit">
+      {% for u in units %}<option>{{ u }}</option>{% endfor %}
+    </select>
+    to
+    <select name="to_unit">
+      {% for u in units %}<option>{{ u }}</option>{% endfor %}
+    </select>
+    <button>Convert</button>
+  </form>
+  {% if result %}<p><strong>{{ result }}</strong></p>{% endif %}
+  {% if error %}<p style="color: #b00020;">{{ error }}</p>{% endif %}
+</body>
+</html>
